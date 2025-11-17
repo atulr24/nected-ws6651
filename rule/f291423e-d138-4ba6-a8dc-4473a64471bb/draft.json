@@ -1,0 +1,210 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-11-17T07:02:32.782Z",
+  "updatedAt": "2025-11-17T07:06:49.766953Z",
+  "isDeleted": false,
+  "testedAt": "2025-11-17T07:06:49.766Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "f291423e-d138-4ba6-a8dc-4473a64471bb",
+  "name": "Rule1inMasterBranch",
+  "commitId": "commit-a1988879-0da4-4fb5-8ae2-9223c978a3ce",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-11-17 07:02:32",
+   "timeStamp": "2025-11-17T07:02:32.782175779Z"
+  },
+  "customInput": {
+   "last": {
+    "name": "last",
+    "dataType": "string",
+    "executedValue": "raizada",
+    "next": "name"
+   },
+   "name": {
+    "name": "name",
+    "dataType": "string",
+    "attribute": "name",
+    "sourceType": "dataSet",
+    "executedValue": "email@email.com",
+    "previous": "last"
+   }
+  },
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+     "nextId": "g_bMFjCW",
+     "firstOutputData": "output_r55GZU",
+     "isEnabled": true
+    },
+    "g_bMFjCW": {
+     "prevId": "rule_01",
+     "firstOutputData": "output_gv69bR",
+     "isEnabled": true
+    }
+   },
+   "properties": {
+    "rule_03": {
+     "type": "simpleCondition"
+    }
+   },
+   "results": {
+    "result_8bb2a3": {
+     "dataType": "string",
+     "keyName": "string"
+    }
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_8bb2a3",
+   "firstAggOutputData": "aggData_List"
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_gv69bR": {
+      "name": "string",
+      "dataType": "string",
+      "value": "BranchMaster",
+      "executedValue": "BranchMaster"
+     },
+     "output_r55GZU": {
+      "name": "string",
+      "dataType": "string",
+      "value": "BranchMaster",
+      "executedValue": "BranchMaster"
+     },
+     "aggData_List": {
+      "name": "List",
+      "dataType": "list",
+      "returnType": "array",
+      "value": "[1,2,3,4]",
+      "executedValue": [
+       1,
+       2,
+       3,
+       4
+      ]
+     }
+    },
+    "actionNode": {
+     "actionData_action_1": {
+      "name": "action_1",
+      "connectorId": "97d4c26c-6dae-4aef-af59-1e30b2f571c1",
+      "entity": "",
+      "entityId": "",
+      "config": {
+       "settings": {
+        
+       },
+       "tokenType": "userToken",
+       "actionMethod": "sendMessage",
+       "text": "\"{{.outputData.output[0].string}}\"",
+       "query": "",
+       "action": "sendMessage",
+       "channel": {
+        "label": "atul-channel",
+        "value": "atul-channel",
+        "is_private": false
+       }
+      }
+     }
+    },
+    "firstActionNode": "actionData_action_1"
+   },
+   "else": {
+    
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "rule_02"
+     ],
+     "siblingIndex": 1
+    },
+    "rule_02": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "rule_01",
+     "leftNode": [
+      "rule_03"
+     ],
+     "rightNode": [
+      "rhs_IJSfzT"
+     ],
+     "siblingIndex": 1
+    },
+    "rule_03": {
+     "sourceType": "customInput",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "siblingIndex": 1
+    },
+    "c_HXdPlj": {
+     "name": "Any",
+     "operator": "any",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_bMFjCW",
+     "leftNode": [
+      "rule_03"
+     ],
+     "siblingIndex": 1
+    },
+    "g_bMFjCW": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "c_HXdPlj"
+     ],
+     "siblingIndex": 1
+    },
+    "rhs_IJSfzT": {
+     "sourceType": "dataSet",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "parent": "rule_02",
+     "siblingIndex": 1
+    }
+   }
+  },
+  "firstCustomInput": "last",
+  "description": "",
+  "policy": "first",
+  "version": "draft",
+  "type": "decisionTable",
+  "dataSetId": "7ac5de59-ab2b-491d-9dd1-804dedbba082",
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  },
+  "isDemo": false,
+  "schemaVersion": "0.1.1"
+ }
+}
