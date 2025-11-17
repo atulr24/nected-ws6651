@@ -3,14 +3,14 @@
  "category": "decisionTable",
  "data": {
   "createdAt": "2025-11-17T07:02:32.782Z",
-  "updatedAt": "2025-11-17T09:25:09.331239Z",
+  "updatedAt": "2025-11-17T09:28:29.120627Z",
   "isDeleted": false,
-  "testedAt": "2025-11-17T07:19:52.874Z",
+  "testedAt": "2025-11-17T09:28:29.119Z",
   "publishedAt": "0001-01-01T00:00:00Z",
   "entityId": "f291423e-d138-4ba6-a8dc-4473a64471bb",
   "name": "Rule1inMasterBranch",
   "commitId": "commit-a1988879-0da4-4fb5-8ae2-9223c978a3ce",
-  "status": "draft",
+  "status": "tested",
   "lastVersion": "",
   "isLive": false,
   "commitInfo": {
@@ -18,6 +18,12 @@
    "timeStamp": "2025-11-17T07:02:32.782175779Z"
   },
   "customInput": {
+   "last": {
+    "name": "last",
+    "dataType": "string",
+    "executedValue": "raizada",
+    "next": "name"
+   },
    "name": {
     "name": "name",
     "dataType": "string",
@@ -25,12 +31,6 @@
     "sourceType": "dataSet",
     "executedValue": "email@email.com",
     "previous": "last"
-   },
-   "last": {
-    "name": "last",
-    "dataType": "string",
-    "executedValue": "raizada",
-    "next": "name"
    }
   },
   "decisionTable": {
@@ -40,7 +40,12 @@
      "firstOutputData": "output_r55GZU",
      "isEnabled": true
     },
+    "g_Ln1tKl": {
+     "prevId": "g_bMFjCW",
+     "firstOutputData": "output_RWGzgL"
+    },
     "g_bMFjCW": {
+     "nextId": "g_Ln1tKl",
      "prevId": "rule_01",
      "firstOutputData": "output_gv69bR",
      "isEnabled": true
@@ -84,6 +89,13 @@
       "value": "test1",
       "executedValue": "test1"
      },
+     "output_RWGzgL": {
+      "name": "string",
+      "dataType": "string",
+      "executedValue": "email@email.com",
+      "attribute": "name",
+      "source": "customInput"
+     },
      "output_gv69bR": {
       "name": "string",
       "dataType": "string",
@@ -96,7 +108,33 @@
       "value": "Branchtest1",
       "executedValue": "Branchtest1"
      }
-    }
+    },
+    "actionNode": {
+     "actionData_action_1": {
+      "name": "action_1",
+      "connectorId": "891bab73-b7e1-4ea0-a4ed-62a9168eeb60",
+      "entity": "",
+      "entityId": "",
+      "config": {
+       "path": "/posts/4",
+       "query": "",
+       "method": "GET",
+       "headers": [],
+       "settings": {
+        "cache": {
+         "enabled": false,
+         "duration": {
+          "unit": "d",
+          "value": 0
+         },
+         "cacheKeys": ""
+        }
+       },
+       "queryParams": []
+      }
+     }
+    },
+    "firstActionNode": "actionData_action_1"
    },
    "else": {
     
@@ -104,14 +142,11 @@
   },
   "conditions": {
    "nodes": {
-    "c_HXdPlj": {
-     "name": "Any",
-     "operator": "any",
-     "dataType": "string",
-     "nodeType": "condition",
-     "parent": "g_bMFjCW",
-     "leftNode": [
-      "rule_03"
+    "g_Ln1tKl": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "c_K8hhDk"
      ],
      "siblingIndex": 1
     },
@@ -159,6 +194,28 @@
      "nodeType": "params",
      "attribute": "name",
      "siblingIndex": 1
+    },
+    "c_HXdPlj": {
+     "name": "Any",
+     "operator": "any",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_bMFjCW",
+     "leftNode": [
+      "rule_03"
+     ],
+     "siblingIndex": 1
+    },
+    "c_K8hhDk": {
+     "name": "Any",
+     "operator": "any",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_Ln1tKl",
+     "leftNode": [
+      "rule_03"
+     ],
+     "siblingIndex": 1
     }
    }
   },
@@ -195,13 +252,26 @@
    "entityType": "rule",
    "entityId": "f291423e-d138-4ba6-a8dc-4473a64471bb",
    "entityVersion": "draft",
+   "entityNodeId": "then-actionData_action_1",
+   "dependencyType": "connector",
+   "dependencyId": "891bab73-b7e1-4ea0-a4ed-62a9168eeb60",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-17T07:06:06.439247Z",
+   "updatedAt": "2025-11-17T09:28:26.746014Z"
+  },
+  {
+   "entityCommitId": "commit-a1988879-0da4-4fb5-8ae2-9223c978a3ce",
+   "entityType": "rule",
+   "entityId": "f291423e-d138-4ba6-a8dc-4473a64471bb",
+   "entityVersion": "draft",
    "entityNodeId": "dataSet",
    "dependencyType": "dataSet",
    "dependencyId": "7ac5de59-ab2b-491d-9dd1-804dedbba082",
    "dependencyVersion": "draft",
    "isDeleted": false,
-   "createdAt": "2025-11-17T07:17:47.900393Z",
-   "updatedAt": "2025-11-17T09:25:09.348987Z"
+   "createdAt": "2025-11-17T07:03:52.131367Z",
+   "updatedAt": "2025-11-17T09:28:26.741999Z"
   }
  ]
 }
