@@ -3,25 +3,11 @@
  "category": "slack",
  "data": {
   "createdAt": "2025-11-17T07:05:35.981Z",
-  "updatedAt": "2025-11-17T07:06:09.605755Z",
+  "updatedAt": "2025-11-17T07:18:39.203586Z",
   "isDeleted": false,
   "entityId": "97d4c26c-6dae-4aef-af59-1e30b2f571c1",
   "name": "slack",
   "category": "third-party",
   "isAction": true
- },
- "dependencies": [
-  {
-   "entityType": "connector",
-   "entityId": "97d4c26c-6dae-4aef-af59-1e30b2f571c1",
-   "entityVersion": "live",
-   "entityNodeId": "staging",
-   "dependencyType": "credential",
-   "dependencyId": "d1d02c01-41c8-4bb9-8d5c-7bdfca3590e1",
-   "dependencyVersion": "live",
-   "isDeleted": false,
-   "createdAt": "2025-11-17T07:05:50.690347Z",
-   "updatedAt": "2025-11-17T07:05:55.609758Z"
-  }
- ]
+ }
 }

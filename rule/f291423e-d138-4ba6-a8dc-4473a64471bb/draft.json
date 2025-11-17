@@ -3,14 +3,14 @@
  "category": "decisionTable",
  "data": {
   "createdAt": "2025-11-17T07:02:32.782Z",
-  "updatedAt": "2025-11-17T07:06:49.766953Z",
+  "updatedAt": "2025-11-17T07:20:07.414077Z",
   "isDeleted": false,
-  "testedAt": "2025-11-17T07:06:49.766Z",
+  "testedAt": "2025-11-17T07:19:52.874Z",
   "publishedAt": "0001-01-01T00:00:00Z",
   "entityId": "f291423e-d138-4ba6-a8dc-4473a64471bb",
   "name": "Rule1inMasterBranch",
   "commitId": "commit-a1988879-0da4-4fb5-8ae2-9223c978a3ce",
-  "status": "tested",
+  "status": "draft",
   "lastVersion": "",
   "isLive": false,
   "commitInfo": {
@@ -65,55 +65,38 @@
   "action": {
    "then": {
     "outputData": {
-     "output_gv69bR": {
-      "name": "string",
-      "dataType": "string",
-      "value": "BranchMaster",
-      "executedValue": "BranchMaster"
-     },
-     "output_r55GZU": {
-      "name": "string",
-      "dataType": "string",
-      "value": "BranchMaster",
-      "executedValue": "BranchMaster"
-     },
      "aggData_List": {
       "name": "List",
       "dataType": "list",
       "returnType": "array",
       "value": "[1,2,3,4]",
+      "next": "aggData_test",
       "executedValue": [
        1,
        2,
        3,
        4
       ]
+     },
+     "aggData_test": {
+      "name": "test",
+      "dataType": "string",
+      "value": "test1",
+      "executedValue": "test1"
+     },
+     "output_gv69bR": {
+      "name": "string",
+      "dataType": "string",
+      "value": "Branchtest1",
+      "executedValue": "Branchtest1"
+     },
+     "output_r55GZU": {
+      "name": "string",
+      "dataType": "string",
+      "value": "Branchtest1",
+      "executedValue": "Branchtest1"
      }
-    },
-    "actionNode": {
-     "actionData_action_1": {
-      "name": "action_1",
-      "connectorId": "97d4c26c-6dae-4aef-af59-1e30b2f571c1",
-      "entity": "",
-      "entityId": "",
-      "config": {
-       "settings": {
-        
-       },
-       "tokenType": "userToken",
-       "actionMethod": "sendMessage",
-       "text": "\"{{.outputData.output[0].string}}\"",
-       "query": "",
-       "action": "sendMessage",
-       "channel": {
-        "label": "atul-channel",
-        "value": "atul-channel",
-        "is_private": false
-       }
-      }
-     }
-    },
-    "firstActionNode": "actionData_action_1"
+    }
    },
    "else": {
     
@@ -189,15 +172,14 @@
    "startAt": "0001-01-01T00:00:00Z",
    "endAt": "0001-01-01T00:00:00Z",
    "api": {
-    "isEnabled": true,
-    "isPrivate": true
+    "isEnabled": true
    },
    "isEnabled": true,
    "cachingInfo": {
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": ""
+     "Unit": "d"
     },
     "CacheKeys": ""
    },
@@ -206,5 +188,20 @@
   },
   "isDemo": false,
   "schemaVersion": "0.1.1"
- }
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-a1988879-0da4-4fb5-8ae2-9223c978a3ce",
+   "entityType": "rule",
+   "entityId": "f291423e-d138-4ba6-a8dc-4473a64471bb",
+   "entityVersion": "draft",
+   "entityNodeId": "dataSet",
+   "dependencyType": "dataSet",
+   "dependencyId": "7ac5de59-ab2b-491d-9dd1-804dedbba082",
+   "dependencyVersion": "draft",
+   "isDeleted": false,
+   "createdAt": "2025-11-17T07:17:47.900393Z",
+   "updatedAt": "2025-11-17T07:20:07.424557Z"
+  }
+ ]
 }
