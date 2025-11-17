@@ -3,7 +3,7 @@
  "category": "decisionTable",
  "data": {
   "createdAt": "2025-11-17T07:02:32.782Z",
-  "updatedAt": "2025-11-17T07:20:07.414077Z",
+  "updatedAt": "2025-11-17T09:25:09.331239Z",
   "isDeleted": false,
   "testedAt": "2025-11-17T07:19:52.874Z",
   "publishedAt": "0001-01-01T00:00:00Z",
@@ -18,12 +18,6 @@
    "timeStamp": "2025-11-17T07:02:32.782175779Z"
   },
   "customInput": {
-   "last": {
-    "name": "last",
-    "dataType": "string",
-    "executedValue": "raizada",
-    "next": "name"
-   },
    "name": {
     "name": "name",
     "dataType": "string",
@@ -31,6 +25,12 @@
     "sourceType": "dataSet",
     "executedValue": "email@email.com",
     "previous": "last"
+   },
+   "last": {
+    "name": "last",
+    "dataType": "string",
+    "executedValue": "raizada",
+    "next": "name"
    }
   },
   "decisionTable": {
@@ -104,6 +104,33 @@
   },
   "conditions": {
    "nodes": {
+    "c_HXdPlj": {
+     "name": "Any",
+     "operator": "any",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_bMFjCW",
+     "leftNode": [
+      "rule_03"
+     ],
+     "siblingIndex": 1
+    },
+    "g_bMFjCW": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "c_HXdPlj"
+     ],
+     "siblingIndex": 1
+    },
+    "rhs_IJSfzT": {
+     "sourceType": "dataSet",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "parent": "rule_02",
+     "siblingIndex": 1
+    },
     "rule_01": {
      "operator": "and",
      "nodeType": "group",
@@ -132,33 +159,6 @@
      "nodeType": "params",
      "attribute": "name",
      "siblingIndex": 1
-    },
-    "c_HXdPlj": {
-     "name": "Any",
-     "operator": "any",
-     "dataType": "string",
-     "nodeType": "condition",
-     "parent": "g_bMFjCW",
-     "leftNode": [
-      "rule_03"
-     ],
-     "siblingIndex": 1
-    },
-    "g_bMFjCW": {
-     "operator": "and",
-     "nodeType": "group",
-     "children": [
-      "c_HXdPlj"
-     ],
-     "siblingIndex": 1
-    },
-    "rhs_IJSfzT": {
-     "sourceType": "dataSet",
-     "dataType": "string",
-     "nodeType": "params",
-     "attribute": "name",
-     "parent": "rule_02",
-     "siblingIndex": 1
     }
    }
   },
@@ -183,7 +183,7 @@
     },
     "CacheKeys": ""
    },
-   "timezone": "Asia/Calcutta",
+   "timezone": "Africa/Bissau",
    "dateFormat": "in"
   },
   "isDemo": false,
@@ -201,7 +201,7 @@
    "dependencyVersion": "draft",
    "isDeleted": false,
    "createdAt": "2025-11-17T07:17:47.900393Z",
-   "updatedAt": "2025-11-17T07:20:07.424557Z"
+   "updatedAt": "2025-11-17T09:25:09.348987Z"
   }
  ]
 }
